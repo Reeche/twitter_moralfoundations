@@ -1,10 +1,6 @@
-import os
-import json
-import pandas as pd
-import re
 import tweepy
 import csv
-import asyncio
+
 
 
 auth = tweepy.OAuthHandler("1LkXJ9SqzQm7an39boqQ5AW0v",
@@ -13,14 +9,14 @@ auth.set_access_token("911681697577611264-lQDqG7lcZGjvL1vIvrR3qKTlaPZH3Xp",
                       "AZqWtegYKM7GrsN0AVmwaqMHQH72R85lzaEwQvpflam8x")
 
 # set wait_on_rate_limit = True to wait automatically
-api = tweepy.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify = True, retry_count=5, retry_delay = 5)
+api = tweepy.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify = True, retry_count=5, retry_delay=5)
 
 # set number of pages, get a list of followers
-users = tweepy.Cursor(api.followers, screen_name="CDU").items(5000)
+users = tweepy.Cursor(api.followers, screen_name="spdde").items(5000)
 
 
 def get_tweets(ids, party):
-    print(ids)
+    #print(ids)
     # initialize a list to hold all the tweepy Tweets
     alltweets = []
 
@@ -28,7 +24,7 @@ def get_tweets(ids, party):
     try:
         new_tweets = api.user_timeline(id=ids, count=200)
         if len(new_tweets) > 19:
-            print("length of tweet", len(new_tweets))
+            print(ids, "length of tweet", len(new_tweets))
             alltweets.extend(new_tweets)
     except tweepy.TweepError:
         print("Failed to run the command on that user ", ids, " , Skipping...")
@@ -53,7 +49,7 @@ def get_tweets(ids, party):
 
 if __name__ == '__main__':
 
-    party = "CDUall"
+    party = "bla"
     with open('%s_tweets.csv' % party, 'w') as f:
         writer = csv.writer(f)
         writer.writerow(["id",
