@@ -1,14 +1,12 @@
 import tweepy
 import csv
 
+auth = tweepy.OAuthHandler("",
+                           "")
+auth.set_access_token("",
+                      "")
 
-
-auth = tweepy.OAuthHandler("1LkXJ9SqzQm7an39boqQ5AW0v",
-                           "eEDlvPcEEfJPKVR1HkIYCmR0BcsISQWXhzjudaNHvMYj3cGgh7")
-auth.set_access_token("911681697577611264-lQDqG7lcZGjvL1vIvrR3qKTlaPZH3Xp",
-                      "AZqWtegYKM7GrsN0AVmwaqMHQH72R85lzaEwQvpflam8x")
-
-# set wait_on_rate_limit = True to wait automatically
+# set wait_on_rate_limit = True to wait automatically, code will wait 15 minutes if limit is hit
 api = tweepy.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify = True, retry_count=5, retry_delay=5)
 
 # set number of pages, get a list of followers
@@ -16,8 +14,13 @@ users = tweepy.Cursor(api.followers, screen_name="spdde").items(5000)
 
 
 def get_tweets(ids, party):
-    #print(ids)
-    # initialize a list to hold all the tweepy Tweets
+    """
+
+    :param ids: user ids
+    :param party: party (screen_name) whose follower you are interested in
+    :return: outputs a csv with up to 200 tweets of the followers of the selected party
+    """
+    # initialize a list to hold all Tweets
     alltweets = []
 
     # make request for most recent tweets (200 is the maximum allowed count)
@@ -29,12 +32,10 @@ def get_tweets(ids, party):
     except tweepy.TweepError:
         print("Failed to run the command on that user ", ids, " , Skipping...")
 
+    # can adjust which information is required and add filters like only German tweets
     outtweets = [[ids,
-                #tweet.id_str,
                   tweet.created_at,
                   tweet.lang,
-                  #tweet.favorite_count,
-                  #tweet.retweet_count,
                   tweet.retweeted,
                   #tweet.source.encode("utf-8"),
                   tweet.text.encode("utf-8"), ] for tweet in alltweets if tweet.lang == "de"]
@@ -44,7 +45,6 @@ def get_tweets(ids, party):
         writer = csv.writer(f)
         writer.writerows(outtweets)
     pass
-    #return outtweets
 
 
 if __name__ == '__main__':
@@ -55,11 +55,10 @@ if __name__ == '__main__':
         writer.writerow(["id",
                          "created_at",
                          "language",
-                         #"favorites",
-                         #"retweets",
                          "retweeted",
                          #"source",
                          "text"])
+    # n is a counter
     n = 0
     for user in users:
         n += 1
