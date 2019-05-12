@@ -1,11 +1,18 @@
 # -*- coding: utf-8 -*-
 
 import pandas as pd
+import warnings
+warnings.filterwarnings("ignore")
 
 
-CDU = pd.read_csv('CDU_cleaned.csv', encoding='utf-8')
+#CDU = pd.read_csv('CDU_cleaned.csv', encoding='utf-8')
+#SPD = pd.read_csv('SPD_cleaned.csv', encoding='utf-8')
+#AFD = pd.read_csv('AFD_cleaned.csv', encoding='utf-8')
+FDP = pd.read_csv('FDP_cleaned.csv', encoding='utf-8')
+#Gruene = pd.read_csv('Gruene_cleaned.csv', encoding='utf-8')
+#Linke = pd.read_csv('Linke_cleaned.csv', encoding='utf-8')
 #CDU = CDU.astype(str)
-#CDU = CDU.head(100)
+FDP = FDP.head(1000)
 
 def preprocessing(data):
 
@@ -30,23 +37,41 @@ def preprocessing(data):
         #data['text'][i] = ' '.join(word for word in txt.split(' ') if not word.startswith("http"))
         data['text'][i] = ' '.join(word for word in txt.split(' ') if not "http" in word)
 
-
-    # convert to lowercase
-    data['text'] = data['text'].str.lower()
-
     # replace unicode to äöü
     for i in range(len(data['text'])):
        data['text'][i] = data['text'][i].replace("\\xc3\\xbc", "ü")
        data['text'][i] = data['text'][i].replace("\\xc3\\xa4", "ä")
        data['text'][i] = data['text'][i].replace("\\xc3\\xb6", "ö")
+       data['text'][i] = data['text'][i].replace("\\xc3\\x9f", "ß")
+       #data['text'][i] = data['text'][i].replace("&amp;", " ")
+       data['text'][i] = data['text'][i].replace(";", " ")
+       #data['text'][i] = data['text'][i].replace("'", " ")
+       #data['text'][i] = data['text'][i].replace('"', " ")
 
+    # convert to lowercase
+    data['text'] = data['text'].str.lower().str.split()
 
     # remove multiple and trailing spaces. but why???
 
-    #print(data['text'][5])
+    print(data['text'][5])
     processed_data = data
     return processed_data
 
 
-file = preprocessing(CDU)
-file.to_csv('output.csv', index = None, header=True)
+#file1 = preprocessing(CDU)
+#file1.to_csv('CDU_processed_v2.csv', sep=";", index = None, header=True)
+
+#file2 = preprocessing(SPD)
+#file2.to_csv('SPD_processed_v2.csv', sep=";", index = None, header=True)
+
+file3 = preprocessing(FDP)
+file3.to_csv('FDP_processed.csv', sep=";", index = None, header=True)
+
+#file4 = preprocessing(AFD)
+#file4.to_csv('AFD_processed.csv', sep=";", index = None, header=True)
+
+#file5 = preprocessing(Gruene)
+#file5.to_csv('Gruene_processed.csv', sep=";", index = None, header=True)
+
+#file6 = preprocessing(Linke)
+#file6.to_csv('Linke_processed.csv', sep=";", index = None, header=True)
