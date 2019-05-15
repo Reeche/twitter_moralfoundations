@@ -5,14 +5,12 @@ import warnings
 warnings.filterwarnings("ignore")
 
 
-#CDU = pd.read_csv('CDU_cleaned.csv', encoding='utf-8')
-#SPD = pd.read_csv('SPD_cleaned.csv', encoding='utf-8')
-#AFD = pd.read_csv('AFD_cleaned.csv', encoding='utf-8')
+CDU = pd.read_csv('CDU_cleaned.csv', encoding='utf-8')
+SPD = pd.read_csv('SPD_cleaned.csv', encoding='utf-8')
+AFD = pd.read_csv('AFD_cleaned.csv', encoding='utf-8')
 FDP = pd.read_csv('FDP_cleaned.csv', encoding='utf-8')
-#Gruene = pd.read_csv('Gruene_cleaned.csv', encoding='utf-8')
-#Linke = pd.read_csv('Linke_cleaned.csv', encoding='utf-8')
-#CDU = CDU.astype(str)
-FDP = FDP.head(1000)
+Gruene = pd.read_csv('Gruene_cleaned.csv', encoding='utf-8')
+Linke = pd.read_csv('Linke_cleaned.csv', encoding='utf-8')
 
 def preprocessing(data):
 
@@ -49,7 +47,7 @@ def preprocessing(data):
        #data['text'][i] = data['text'][i].replace('"', " ")
 
     # convert to lowercase
-    data['text'] = data['text'].str.lower().str.split()
+    data['text'] = data['text'].str.lower()
 
     # remove multiple and trailing spaces. but why???
 
@@ -58,20 +56,21 @@ def preprocessing(data):
     return processed_data
 
 
-#file1 = preprocessing(CDU)
-#file1.to_csv('CDU_processed_v2.csv', sep=";", index = None, header=True)
+file1 = preprocessing(CDU)
+file1.to_csv('CDU_processed_nosplit.csv', sep=";", index = None, header=True)
 
-#file2 = preprocessing(SPD)
-#file2.to_csv('SPD_processed_v2.csv', sep=";", index = None, header=True)
+file2 = preprocessing(SPD)
+file2.to_csv('SPD_processed_nosplit.csv', sep=";", index = None, header=True)
 
 file3 = preprocessing(FDP)
-file3.to_csv('FDP_processed.csv', sep=";", index = None, header=True)
+file3.to_csv('FDP_processed_nosplit.csv', sep=";", index = None, header=True)
 
-#file4 = preprocessing(AFD)
-#file4.to_csv('AFD_processed.csv', sep=";", index = None, header=True)
+file4 = preprocessing(AFD)
+file4.to_csv('AFD_processed_nosplit.csv', sep=";", index = None, header=True)
 
-#file5 = preprocessing(Gruene)
-#file5.to_csv('Gruene_processed.csv', sep=";", index = None, header=True)
+file5 = preprocessing(Gruene)
+file5.to_csv('Gruene_processed_nosplit.csv', sep=";", index = None, header=True)
 
-#file6 = preprocessing(Linke)
-#file6.to_csv('Linke_processed.csv', sep=";", index = None, header=True)
+file6 = preprocessing(Linke)
+file6.to_csv('Linke_processed_nosplit.csv', sep=";", index = None, header=True)
+

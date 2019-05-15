@@ -8,9 +8,6 @@ FDP_original = pd.read_csv('FDP_tweets.csv', encoding='utf-8')
 Gruene_original = pd.read_csv('Gruene_tweets.csv', encoding='utf-8')
 Linke_original = pd.read_csv('dieLinkeall-tweets.csv', encoding='utf-8')
 
-#CDU_original = CDU_original.astype(str)
-#SPD_original = SPD_original.astype(str)
-
 
 # drop all duplicated IDs, do this for all parties
 cdu_unique = CDU_original['id'].drop_duplicates(keep='first')
