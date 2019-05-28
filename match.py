@@ -24,7 +24,7 @@ data = df1
 #data = df1.append([df2, df3], ignore_index=True)
 
 
-mfd = pd.read_csv('wertung_withoutstar.csv', sep=",", header=0, encoding='utf-8')
+mfd = pd.read_csv('wertung_neu.csv', sep=",", header=0, encoding='utf-8')
 
 
 
@@ -66,53 +66,61 @@ def f(x):
 
 
 party_count = pd.DataFrame(data=data, columns=['party', 'scores']).groupby('party').apply(f)
-#print(party_count)
 
-# uncomment this part for counting occurences of each MFD word for each party
-for index in party_count.index:
 
-    keys = mfd.iloc[:, 0].tolist()
-    score_dict = {key: 0 for key in keys}
+# for counting the frequency of the MFD words for each party
+def countmfdfrequency(party_count):
+    # uncomment this part for counting occurences of each MFD word for each party
+    for index in party_count.index:
 
-    scores = party_count.get_value(index, 'scores').replace("[", "").replace("]", "").\
-        replace(",", "").replace("{", "").replace("}", "").replace("'", "").split(' ')
-    for score in scores:
-        if score != '':
-            try:
-                number = str(score)
-                if number in score_dict:
-                    score_dict[number] += 1
-            except:
-                pass
-    print(index, pd.DataFrame.from_dict(score_dict, orient='index'))
-    #print(index, score_dict)
+        keys = mfd.iloc[:, 0].tolist()
+        score_dict = {key: 0 for key in keys}
 
-# uncomment the part below to count absolute frequency of each category grouped by party
-#
-# for index in party_count.index:
-#     score_dict = {
-#         "1": 0,
-#         "2": 0,
-#         "3": 0,
-#         "4": 0,
-#         "5": 0,
-#         "6": 0,
-#         "7": 0,
-#         "8": 0,
-#         "9": 0,
-#         "10": 0,
-#         "11": 0,
-#         "12": 0,
-#     }
-#     scores = party_count.get_value(index, 'scores').replace("[", "").replace("]", "").replace(",", "").replace("{",
-#                                                                                                                "").replace(
-#         "}", "").split(' ')
-#     for score in scores:
-#         if score != '':
-#             try:
-#                 number = str(int(float(score)))
-#                 if number in score_dict:
-#                     score_dict[number] += 1
-#             except:
-#                 pass
-#     print(index, score_dict)
+        scores = party_count.get_value(index, 'scores').replace("[", "").replace("]", "").\
+            replace(",", "").replace("{", "").replace("}", "").replace("'", "").split(' ')
+        for score in scores:
+            if score != '':
+                try:
+                    number = str(score)
+                    if number in score_dict:
+                        score_dict[number] += 1
+                except:
+                    pass
+        # output needs to be saved manually into a csv
+        print(index, pd.DataFrame.from_dict(score_dict, orient='index'))
+
+countmfdfrequency(party_count)
+
+
+# for counting the occurence of the categories for each party
+def countcategory(party_count):
+    for index in party_count.index:
+        score_dict = {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 0,
+            "6": 0,
+            "7": 0,
+            "8": 0,
+            "9": 0,
+            "10": 0,
+            "11": 0,
+            "12": 0,
+        }
+        scores = party_count.get_value(index, 'scores').replace("[", "").replace("]", "").replace(",", "").replace("{",
+                                                                                                                   "").replace(
+            "}", "").split(' ')
+        for score in scores:
+            if score != '':
+                try:
+                    number = str(int(float(score)))
+                    if number in score_dict:
+                        score_dict[number] += 1
+                except:
+                    pass
+        print(index, score_dict)
+
+# uncomment this line below to count categories for each party
+#countcategory(party_count)
