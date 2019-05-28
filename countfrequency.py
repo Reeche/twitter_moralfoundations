@@ -31,49 +31,8 @@ def countmostfrequent(party):
     file = open('german_stopwords.txt', 'r')
     manual_stop_words = file.read()
     manual_stop_words = manual_stop_words.split("\n")
+    # omit stopwords
     test = results[~results.index.str.contains('|'.join(manual_stop_words))]
     print(test)
-    #test.to_csv('Gruene_mostfrequent.csv', index=False)
+    test.to_csv('Gruene_mostfrequent.csv', index=False)
     pass
-
-
-
-def countmostfrequentmfd(party):
-
-    results = party['text'].tolist()
-    #print(results[0])
-
-    mfd = pd.read_csv('wertung_withoutstar.csv', sep=",", header=0, encoding='utf-8')
-    words = mfd.iloc[:, 0].to_frame()
-    words = words.set_index("word", drop=True)
-
-    words['count'] = 0
-    #words.columns = ['word', 'count']
-    print("print", words.loc["gewalt", "count"])
-
-    #countoccurences = []
-    occurences = 0
-    for word in words:
-        for i in range(len(results)):
-            occurences += results[i].count(str(word))
-            print(occurences)
-        words.loc[str(word), 'count'] = occurences
-        #occurences = results[i].count(str(word))
-    #countoccurences.append(occurences)
-        #words.loc[words['word'] == word]['count'] = occurences
-        #words['word'][word].append(occurences)
-
-    print(words)
-
-    #test.to_csv('Gruene_mostfrequent.csv', index=False)
-    pass
-
-countmostfrequentmfd(Gruene)
-
-#mfd = pd.read_csv('wertung_withoutstar.csv', sep=",", header=0, encoding='utf-8')
-#words = mfd.iloc[:, 0]
-#liste = []
-#for word in words:
-#    counts = Gruene['text'].contain(word).sum()
-#    liste.append(counts)
-#print(len(liste))

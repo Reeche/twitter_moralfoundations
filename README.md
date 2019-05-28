@@ -9,4 +9,6 @@ The project involves analysing tweets based on the moral foundation theory by Ha
     - remove words containing @ and http
     - replace corresponding unicode with äöüß
     - lower character and split
-4. match.py: count occurences of moral dictionary words
+4. match.py: count occurences of moral dictionary words. Output is a dictionary with party and count for each category. This output need to be saved in a csv as input for chi_test.py.
+5. chi_test.py: does chi-square test for scores
+6. countfrequency.py: counts most most occuring words after omitting stopwords
