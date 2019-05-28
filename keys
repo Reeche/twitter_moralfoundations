@@ -1,4 +1,0 @@
-auth = tweepy.OAuthHandler("1LkXJ9SqzQm7an39boqQ5AW0v",
-                           "eEDlvPcEEfJPKVR1HkIYCmR0BcsISQWXhzjudaNHvMYj3cGgh7")
-auth.set_access_token("911681697577611264-lQDqG7lcZGjvL1vIvrR3qKTlaPZH3Xp",
-                      "AZqWtegYKM7GrsN0AVmwaqMHQH72R85lzaEwQvpflam8x")
