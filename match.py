@@ -9,27 +9,39 @@ pd.set_option('display.max_rows', 500)
 pd.set_option('display.max_columns', 200)
 
 
-df1 = pd.read_csv('Linke_processed.csv', sep=";", header=0, encoding="utf-8", low_memory=False)
+df1 = pd.read_csv('../data/CDU_processed.csv', sep=";", header=0, encoding="utf-8", low_memory=False)
 df1['scores'] = np.nan
-df1['party'] = 'linke'
-data = df1
+df1['party'] = 'cdu'
 
-#df2 = pd.read_csv('AFD_processed.csv', sep=";", header=0, encoding="utf-8", low_memory=False)
-#df2['scores'] = np.nan
-#df2['party'] = 'afd'
+df2 = pd.read_csv('../data/SPD_processed.csv', sep=";", header=0, encoding="utf-8", low_memory=False)
+df2['scores'] = np.nan
+df2['party'] = 'spd'
 
-#df3 = pd.read_csv('Linke_processed.csv', sep=";", header=0, encoding="utf-8", low_memory=False)
-#df3['scores'] = np.nan
-#df3['party'] = 'linke'
-#data = df1.append([df2, df3], ignore_index=True)
+df3 = pd.read_csv('../data/Gruene_processed.csv', sep=";", header=0, encoding="utf-8", low_memory=False)
+df3['scores'] = np.nan
+df3['party'] = 'gruene'
+
+df4 = pd.read_csv('../data/Linke_processed.csv', sep=";", header=0, encoding="utf-8", low_memory=False)
+df4['scores'] = np.nan
+df4['party'] = 'linke'
+
+df5 = pd.read_csv('../data/FDP_processed.csv', sep=";", header=0, encoding="utf-8", low_memory=False)
+df5['scores'] = np.nan
+df5['party'] = 'fdp'
+
+df6 = pd.read_csv('../data/AFD_processed.csv', sep=";", header=0, encoding="utf-8", low_memory=False)
+df6['scores'] = np.nan
+df6['party'] = 'afd'
+
+# put everzthing into a huge dataframe
+data = df1.append([df2, df3, df4, df5, df6], ignore_index=True)
 
 
-mfd = pd.read_csv('wertung_neu.csv', sep=",", header=0, encoding='utf-8')
-
+mfd = pd.read_csv('../data/wertung_neu.csv', sep=",", header=0, encoding='utf-8')
 
 
 # this creates a list of all words and corresponding number
-wertung = pd.read_csv('wertung_withoutstar.csv', sep=",", encoding="utf-8", low_memory=False)
+wertung = pd.read_csv('../data/wertung_neu.csv', sep=",", encoding="utf-8", low_memory=False)
 wertung['word'] = wertung['word'].astype(str)
 df1 = wertung[['word', 'score_1']].dropna()
 df1.rename(index=str, columns={'score_1': 'scores'}, inplace=True)
@@ -39,10 +51,6 @@ df3 = wertung[['word', 'score_3']].dropna()
 df3.rename(index=str, columns={'score_3': 'scores'}, inplace=True)
 wertung = df1.append(df2.append(df3, ignore_index=True), ignore_index=True)
 
-#print(wertung)
-#%%
-#print(data.columns)
-#print(wertung.head(500))
 
 for index in data.index:
     word_list = literal_eval(data.get_value(index, 'text'))
@@ -55,8 +63,8 @@ for index in data.index:
             if word.find(word_) != -1:
                 # if found, get the score of the found word and append to the list
                 score = wertung.get_value(index_, 'scores')
-                #word_matched.append(score)
-                word_matched.append(word_) #append(word_) adds the found MFD word to a list
+                #word_matched.append(score) # uncomment this line if you want categories (countcategory)
+                word_matched.append(word_) #append(word_) adds the found MFD word to a list (countmfdfrequency)
     data.iloc[index, 6] = str(word_matched)
 #print(data.iloc[index, 6])
 

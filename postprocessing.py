@@ -46,8 +46,9 @@ def preprocessing(data):
        #data['text'][i] = data['text'][i].replace("'", " ")
        #data['text'][i] = data['text'][i].replace('"', " ")
 
-    # convert to lowercase
-    data['text'] = data['text'].str.lower()
+    # convert to lowercase, best not to split but the further analysis was done using split()
+    data['text'] = data['text'].str.lower().split()
+
 
     # remove multiple and trailing spaces. but why???
 
