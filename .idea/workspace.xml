@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b45a49a-21c9-4e24-923d-137088bc8d27" name="Default Changelist" comment="added analysis">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/match.py" beforeDir="false" afterPath="$PROJECT_DIR$/match.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,34 +10,25 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="67150604">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.7" value="1" />
+          <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/match.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="70">
-              <caret line="35" column="43" lean-forward="true" selection-start-line="35" selection-start-column="43" selection-end-line="35" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wertung_neu.csv">
-          <provider selected="true" editor-type-id="csv-text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
-            </state>
-          </provider>
-          <provider editor-type-id="csv-table-editor">
-            <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/countfrequency.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="23" selection-start-line="23" selection-end-line="23" />
+            <state relative-caret-position="250">
+              <caret line="40" selection-start-line="40" selection-end-line="40" />
             </state>
           </provider>
         </entry>
@@ -46,7 +36,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gettweets.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="53">
+            <state relative-caret-position="100">
               <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
@@ -56,55 +46,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wertung_original.csv">
-          <provider selected="true" editor-type-id="csv-text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="13" lean-forward="true" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-            </state>
-          </provider>
-          <provider editor-type-id="csv-table-editor">
-            <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wertung_withoutstar.csv">
-          <provider selected="true" editor-type-id="csv-text-editor">
-            <state relative-caret-position="-3760">
-              <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
-            </state>
-          </provider>
-          <provider editor-type-id="csv-table-editor">
-            <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="165">
-                <caret line="11" column="94" selection-start-line="11" selection-start-column="94" selection-end-line="11" selection-end-column="94" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
+            <state relative-caret-position="40">
               <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/keys.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
         </entry>
@@ -180,10 +125,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1890" />
-    <option name="y" value="37" />
-    <option name="width" value="1558" />
-    <option name="height" value="777" />
+    <option name="width" value="1946" />
+    <option name="height" value="1749" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -329,6 +272,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Python.analyse_scores" />
+      <item itemvalue="Python.analysis" />
+      <item itemvalue="Python.countfrequency" />
+      <item itemvalue="Python.match" />
+      <item itemvalue="Python.postprocessing" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.match" />
@@ -398,10 +348,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1890" y="37" width="1558" height="777" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="0" width="1297" height="1166" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49915397" visible="true" weight="0.2264151" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49915397" visible="true" weight="0.22619048" />
       <window_info id="Structure" order="1" sideWeight="0.500846" side_tool="true" weight="0.23819591" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -439,6 +388,9 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout-to-restore>
   </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added filter out doubles" />
     <MESSAGE value="added readme" />
@@ -451,104 +403,37 @@
     <entry file="file://$PROJECT_DIR$/preprocessing.py" />
     <entry file="file://$PROJECT_DIR$/52362476_tweets.csv" />
     <entry file="file://$PROJECT_DIR$/SPD_tweets.csv" />
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tweepy/binder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1509">
-          <caret line="163" selection-start-line="163" selection-end-line="163" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tweepy/binder.py" />
     <entry file="file://$PROJECT_DIR$/Part2_clean.py" />
     <entry file="file://$PROJECT_DIR$/Part1_clean.py" />
     <entry file="file://$PROJECT_DIR$/CDU_tweets.csv" />
     <entry file="file://$PROJECT_DIR$/FDP_tweets.csv" />
     <entry file="file://$PROJECT_DIR$/CDU1_tweets.csv" />
-    <entry file="file://$PROJECT_DIR$/SPDall_tweets.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/SPDall_tweets.csv" />
     <entry file="file://$PROJECT_DIR$/test.csv" />
-    <entry file="file://$PROJECT_DIR$/AFD_tweets.csv">
-      <provider selected="true" editor-type-id="LargeFileEditor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CDU_cleaned.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="1065">
-          <caret line="71" column="95" selection-start-line="71" selection-start-column="78" selection-end-line="71" selection-end-column="95" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AFD_cleaned.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="-496864" />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/AFD_tweets.csv" />
+    <entry file="file://$PROJECT_DIR$/CDU_cleaned.csv" />
+    <entry file="file://$PROJECT_DIR$/AFD_cleaned.csv" />
     <entry file="file://$PROJECT_DIR$/CDU_processednew.csv" />
     <entry file="file://$PROJECT_DIR$/CDU_processed_v2.csv" />
     <entry file="file://$PROJECT_DIR$/FDP_processed_v2.csv" />
     <entry file="file://$PROJECT_DIR$/FDP_processed.csv" />
     <entry file="file://$PROJECT_DIR$/readme" />
-    <entry file="file://$PROJECT_DIR$/CDUall_tweets.csv">
-      <provider selected="true" editor-type-id="csv-text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Linke_cleaned.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state>
-          <caret column="36" selection-start-column="36" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AFD_processed.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="361">
-          <caret line="24357" lean-forward="true" selection-start-line="24357" selection-end-line="24357" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CDU_processed.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="-622349" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Linke_test.csv">
-      <provider selected="true" editor-type-id="csv-text-editor" />
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Linke_processed.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="589353">
-          <caret line="39769" selection-start-line="39769" selection-end-line="39769" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FDP_cleaned.csv">
-      <provider selected="true" editor-type-id="csv-text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/CDUall_tweets.csv" />
+    <entry file="file://$PROJECT_DIR$/Linke_cleaned.csv" />
+    <entry file="file://$PROJECT_DIR$/AFD_processed.csv" />
+    <entry file="file://$PROJECT_DIR$/CDU_processed.csv" />
+    <entry file="file://$PROJECT_DIR$/Linke_test.csv" />
+    <entry file="file://$PROJECT_DIR$/Linke_processed.csv" />
+    <entry file="file://$PROJECT_DIR$/FDP_cleaned.csv" />
     <entry file="file://$PROJECT_DIR$/postprocessing.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-169">
           <caret line="19" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="e#25#44#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pandas/core/generic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="4389" column="30" lean-forward="true" selection-start-line="4389" selection-start-column="30" selection-end-line="4389" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pandas/core/generic.py" />
     <entry file="file://$PROJECT_DIR$/deletedouble.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-58">
@@ -559,81 +444,30 @@
     <entry file="file://$PROJECT_DIR$/Linke_mostfrequent.csv" />
     <entry file="file://$PROJECT_DIR$/CDU_mostfrequent.csv" />
     <entry file="file://$PROJECT_DIR$/AFD_mostfrequent.csv" />
-    <entry file="file://$PROJECT_DIR$/german_stopwords.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="4" selection-start-line="1" selection-end-line="1" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gruene_tweets.csv">
-      <provider selected="true" editor-type-id="csv-text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/german_stopwords.txt" />
+    <entry file="file://$PROJECT_DIR$/Gruene_tweets.csv" />
     <entry file="file://$PROJECT_DIR$/analyse_scores.py" />
-    <entry file="file://$PROJECT_DIR$/scores_relative.csv">
-      <provider selected="true" editor-type-id="csv-text-editor" />
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scores.csv">
-      <provider selected="true" editor-type-id="csv-text-editor" />
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/scores_relative.csv" />
+    <entry file="file://$PROJECT_DIR$/scores.csv" />
     <entry file="file://$PROJECT_DIR$/analysis.py" />
-    <entry file="file://$PROJECT_DIR$/Gruene_processed.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="6570">
-          <caret line="438" column="75" selection-start-line="438" selection-start-column="69" selection-end-line="438" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wertung_withoutstar.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="-3760">
-          <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
-        </state>
-      </provider>
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keys">
+    <entry file="file://$PROJECT_DIR$/Gruene_processed.csv" />
+    <entry file="file://$PROJECT_DIR$/wertung_withoutstar.csv" />
+    <entry file="file://$PROJECT_DIR$/keys" />
+    <entry file="file://$PROJECT_DIR$/keys.txt" />
+    <entry file="file://$PROJECT_DIR$/wertung_original.csv" />
+    <entry file="file://$PROJECT_DIR$/countfrequency.py" />
+    <entry file="file://$PROJECT_DIR$/wertung_neu.csv" />
+    <entry file="file://$PROJECT_DIR$/README.md" />
+    <entry file="file://$PROJECT_DIR$/match.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="3" selection-end-column="70" />
+        <state relative-caret-position="250">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keys.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wertung_original.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="13" lean-forward="true" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-        </state>
-      </provider>
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gettweets.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="53">
+        <state relative-caret-position="100">
           <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
@@ -641,37 +475,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/countfrequency.py">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wertung_neu.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
-        </state>
-      </provider>
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="165">
-            <caret line="11" column="94" selection-start-line="11" selection-start-column="94" selection-end-line="11" selection-end-column="94" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/match.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="35" column="43" lean-forward="true" selection-start-line="35" selection-start-column="43" selection-end-line="35" selection-end-column="43" />
+        <state relative-caret-position="40">
+          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
         </state>
       </provider>
     </entry>
