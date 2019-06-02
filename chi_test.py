@@ -13,8 +13,8 @@ stats, p, dof, expected = chi2_contingency(np.array([data.iloc[:, 0]*100, data.i
 print("for all parties ", "stats", stats, "p-value", p, "dof", dof)
 
 ## For pairs:
-for i in range(0, 5):
-    for j in range(1, 5):
+for i in range(0, 6):
+    for j in range(1, 6):
         p1 = data.iloc[:, i]*100
         p2 = data.iloc[:, j]*100
         stats, p, dof, expected = chi2_contingency(np.array([p1, p2]))
